@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/opendistro-for-elasticsearch/perftop"
+    "url": "https://github.com/opensearch-project/perftop"
   },
   "license": "Apache-2.0",
   "dependencies": {

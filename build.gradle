@@ -1,15 +1,42 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
+* Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+*
+* Licensed under the Apache License, Version 2.0 (the "License").
+* You may not use this file except in compliance with the License.
+* A copy of the License is located at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* or in the "license" file accompanying this file. This file is distributed
+* on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+* express or implied. See the License for the specific language governing
+* permissions and limitations under the License.
+*/
+
 buildscript {
 
     ext {
-        es_version = System.getProperty("es.version", "7.2.0")
+        opensearch_version = System.getProperty("opensearch.version", "7.10.3")
     }
     // This isn't applying from repositories.gradle so repeating it here
     repositories {
         mavenCentral()
+        mavenLocal()
     }
 
     dependencies {
-        classpath "org.elasticsearch.gradle:build-tools:${es_version}"
+        classpath "org.opensearch.gradle:build-tools:${opensearch_version}-SNAPSHOT"
     }
 }
 
@@ -20,11 +47,11 @@ plugins {
 
 node {
     version = "10.15.0"
-    download = true
+    download = false
 }
 
 ext {
-    opendistroVersion = '1.2.0'
+    opendistroVersion = '1.13.0'
     isSnapshot = "true" == System.getProperty("build.snapshot", "true")
     isLinux = "true" == System.getProperty("build.linux", "false")
     isMacOS = "true" == System.getProperty("build.macos", "false")
@@ -44,9 +71,10 @@ if (isSnapshot) {
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
-apply plugin: 'elasticsearch.esplugin'
+apply plugin: 'opensearch.opensearchplugin'
 
 ext {
     projectSubstitutions = [:]
@@ -57,6 +85,7 @@ test {
     enabled = false
 }
 licenseHeaders.enabled = false
+validateNebulaPom.enabled = false
 
 task npmRunBuild(type: NpmTask, dependsOn: 'npmInstall') {
     if (isLinux) {
@@ -81,10 +110,10 @@ clean {
 
 // We are excluding plugin descriptor for PerfTop
 // The info here could be random
-esplugin {
+opensearchplugin {
     name 'opendistro-perf-top'
     description 'PerfTop'
-    classname 'com.amazon.opendistro.elasticsearch.performanceanalyzer.PerformanceAnalyzerPlugin'
+    classname 'com.amazon.opendistro.opensearch.performanceanalyzer.PerformanceAnalyzerPlugin'
 }
 
 
@@ -108,6 +137,6 @@ bundlePlugin {
 }
 
 // The testingConventions task now mandates atleast one of the integ test tasks to be performed.
-// Since perftop is not really a plugin on its own, it fails the plugin install step during the integ tests. So, 
+// Since perftop is not really a plugin on its own, it fails the plugin install step during the integ tests. So,
 // skip running testingConventions task.
-gradle.startParameter.excludedTaskNames += ["integTestCluster#wait", "integTestRunner", "testingConventions"]
+gradle.startParameter.excludedTaskNames += ["testingConventions"]

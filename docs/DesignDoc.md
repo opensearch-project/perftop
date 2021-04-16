@@ -6,7 +6,7 @@
     <img src="../images/ArchitectureDiagram.png" alt="term" width="700">
 </p>
 
-PerfTop CLI is a front-end visualization tool for the Performance Analyzer plugin (PA) so that users can conveniently monitor Elasticsearch cluster performance in real-time.
+PerfTop CLI is a front-end visualization tool for the Performance Analyzer plugin (PA) so that users can conveniently monitor OpenSearch cluster performance in real-time.
 
 Its workflow entails each widget (1) making a GET request to the PA's REST API, (2) parsing the response, and (3) plotting the data.
 
@@ -83,13 +83,13 @@ Bar graphs show data on dimension-level. The data will be summed across all node
 
 ### Line
 
-Line graph widget shows metrics on node-level, each line representing a Elasticsearch cluster node. Because the number of nodes is arbitrary, the colors are randomized by default unless the user specifies the set of colors in the configuration.
+Line graph widget shows metrics on node-level, each line representing an OpenSearch cluster node. Because the number of nodes is arbitrary, the colors are randomized by default unless the user specifies the set of colors in the configuration.
 
 ### Global options
 
 To allow more flexibility in the data visualization, we have extended few user-configurable options below:
 
-* `nodeName` — the name of the ES cluster node for PerfTop to do a “startsWith” check during data parsing. This allows cluster-wide tables and bar graphs to be node-specific.
+* `nodeName` — the name of the OpenSearch cluster node for PerfTop to do a “startsWith” check during data parsing. This allows cluster-wide tables and bar graphs to be node-specific.
 * `dimensionFilters` — users can define which dimension values to fetch for.
 
 ## Error Handling
@@ -108,7 +108,7 @@ PerfTop incorporates the simplest way of logging — sending exception messages 
 
 ## Dashboard Configuration
 
-Users are able to configure the PerfTop dashboards via a JSON file. They can specify widget types, query parameters (e.g. Elasticsearch cluster endpoint and what metrics to query for.), and visualization options (e.g. colors, widget positions, etc.).
+Users are able to configure the PerfTop dashboards via a JSON file. They can specify widget types, query parameters (e.g. OpenSearch cluster endpoint and what metrics to query for.), and visualization options (e.g. colors, widget positions, etc.).
 
 Example JSON format:
 
