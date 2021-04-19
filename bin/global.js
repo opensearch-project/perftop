@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /*
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -8,8 +10,6 @@
  * Modifications Copyright OpenSearch Contributors. See
  * GitHub history for details.
  */
-
-#!/usr/bin/env node
 
 /*
  * Copyright <2019> Amazon.com, Inc. or its affiliates. All Rights Reserved.
