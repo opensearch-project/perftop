@@ -27,12 +27,14 @@
 buildscript {
 
     ext {
-        opensearch_version = System.getProperty("opensearch.version", "7.10.3")
+        opensearch_version = System.getProperty("opensearch.version", "1.0.0")
     }
     // This isn't applying from repositories.gradle so repeating it here
     repositories {
         mavenCentral()
         mavenLocal()
+        maven { url "https://plugins.gradle.org/m2/" }
+        jcenter()
     }
 
     dependencies {
@@ -72,6 +74,8 @@ if (isSnapshot) {
 repositories {
     mavenCentral()
     mavenLocal()
+    maven { url "https://plugins.gradle.org/m2/" }
+    jcenter()
 }
 
 apply plugin: 'opensearch.opensearchplugin'
