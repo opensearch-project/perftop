@@ -37,11 +37,7 @@ jobs:
         working-directory: ./OpenSearch
         run: ./gradlew publishToMavenLocal
 
-      - name: Run test
-        run: |
-          ./gradlew test -Dbuild.linux=true
-          ./gradlew test -Dbuild.macos=true
-
+      # TODO: Add tests and run in build
       - name: Build perfTop artifacts
         run: |
           ./gradlew clean
