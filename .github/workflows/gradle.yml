@@ -4,12 +4,10 @@ on:
   push:
     branches:
       - main
-      - perftop-ci
 
   pull_request:
     branches:
       - main
-      - perftop-ci
 
 jobs:
   build:
@@ -39,7 +37,7 @@ jobs:
         working-directory: ./OpenSearch
         run: ./gradlew publishToMavenLocal
 
-      - name: Build
+      - name: Build perfTop artifacts
         run: |
           ./gradlew clean
           ./gradlew build -Dbuild.snapshot=false -Dbuild.linux=true

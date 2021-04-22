@@ -34,7 +34,6 @@ buildscript {
         mavenCentral()
         mavenLocal()
         maven { url "https://plugins.gradle.org/m2/" }
-        jcenter()
     }
 
     dependencies {
@@ -53,7 +52,7 @@ node {
 }
 
 ext {
-    opendistroVersion = '1.13.0'
+    opendistroVersion = '1.0.0'
     isSnapshot = "true" == System.getProperty("build.snapshot", "true")
     isLinux = "true" == System.getProperty("build.linux", "false")
     isMacOS = "true" == System.getProperty("build.macos", "false")
@@ -75,7 +74,6 @@ repositories {
     mavenCentral()
     mavenLocal()
     maven { url "https://plugins.gradle.org/m2/" }
-    jcenter()
 }
 
 apply plugin: 'opensearch.opensearchplugin'
