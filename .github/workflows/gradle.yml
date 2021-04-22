@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up JDK 12
+        uses: actions/setup-java@v1
+        with:
+          java-version: 12.0.x
+
+      - name: Set up Node JS
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.15.0
+
+      - name: Checkout perftop package
+        uses: actions/checkout@v2
+
+      - name: Checkout OpenSearch
+        uses: actions/checkout@v2
+        with:
+          repository: 'opensearch-project/OpenSearch'
+          path: OpenSearch
+
+      - name: Build OpenSearch
+        working-directory: ./OpenSearch
+        run: ./gradlew publishToMavenLocal
+
+      # TODO: Add tests and run in build
+      - name: Build perfTop artifacts
+        run: |
+          ./gradlew clean
+          ./gradlew build -Dbuild.snapshot=false -Dbuild.linux=true
+          ./gradlew build -Dbuild.snapshot=false -Dbuild.macos=true
