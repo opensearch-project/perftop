@@ -37,6 +37,10 @@ jobs:
         working-directory: ./OpenSearch
         run: ./gradlew publishToMavenLocal
 
+      - name: Run test
+        run: |
+          ./gradlew test
+
       - name: Build perfTop artifacts
         run: |
           ./gradlew clean
