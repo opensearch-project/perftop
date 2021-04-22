@@ -39,7 +39,8 @@ jobs:
 
       - name: Run test
         run: |
-          ./gradlew test
+          ./gradlew test -Dbuild.linux=true
+          ./gradlew test -Dbuild.macos=true
 
       - name: Build perfTop artifacts
         run: |
