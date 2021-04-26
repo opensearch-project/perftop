@@ -27,7 +27,7 @@
 buildscript {
 
     ext {
-        opensearch_version = System.getProperty("opensearch.version", "1.0.0-alpha1")
+        opensearch_version = System.getProperty("opensearch.version", "1.0.0-alpha2")
     }
     // This isn't applying from repositories.gradle so repeating it here
     repositories {
@@ -53,14 +53,14 @@ node {
 }
 
 ext {
-    opensearchVersion = '1.0.0'
+    perftop_version = '1.0.0'
     isSnapshot = "true" == System.getProperty("build.snapshot", "true")
     isLinux = "true" == System.getProperty("build.linux", "false")
     isMacOS = "true" == System.getProperty("build.macos", "false")
 }
 
 group =  "org.opensearch"
-version = "${opensearchVersion}.0"
+version = "${perftop_version}.0-beta1"
 
 if (isLinux) {
     version += "-linux-x64"
@@ -116,23 +116,23 @@ clean {
 // We are excluding plugin descriptor for PerfTop
 // The info here could be random
 opensearchplugin {
-    name 'opendistro-perf-top'
-    description 'PerfTop'
+    name 'opensearch-perf-top'
+    description 'OpenSearch PerfTop'
     classname 'com.amazon.opendistro.opensearch.performanceanalyzer.PerformanceAnalyzerPlugin'
 }
 
 
 bundlePlugin {
-    exclude "opendistro-perf-top*.jar"
+    exclude "opensearch-perf-top*.jar"
     exclude "plugin-descriptor.properties"
     if (isLinux) {
         from ("build/") {
-            include "opendistro-perf-top-linux"
+            include "opensearch-perf-top-linux"
         }
     }
     if (isMacOS) {
         from ("build/") {
-            include "opendistro-perf-top-macos"
+            include "opensearch-perf-top-macos"
         }
     }
     from ("dashboards/") {
