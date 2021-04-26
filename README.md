@@ -68,7 +68,7 @@ For more information, see the [documentation](https://opendistro.github.io/for-e
 Install with npm:
 
 ```bash
-npm install -g @aws/opendistro-for-elasticsearch-perftop
+npm install -g @aws/opensearch-perftop
 ```
 Excutables:
 
@@ -80,12 +80,12 @@ Supported platforms: Linux, macOS
 
 npm:
 ```bash
-opendistro-perf-top --dashboard NodeAnalysis
+opensearch-perf-top --dashboard NodeAnalysis
 ```
 Excutables:
 
 ```
-./opendistro-perf-top-${PLATFORM} --dashboard $JSON --endpoint $ENDPOINT
+./opensearch-perf-top-${PLATFORM} --dashboard $JSON --endpoint $ENDPOINT
 ```
 
 ## Build
@@ -97,7 +97,7 @@ Prerequisites:
 1. Clone/download from Github
 2. Run `./gradlew build -Dbuild.linux={true/false} -Dbuild.macos={true/false}`. This will run the following:
    1. `npm install` - locally installs dependencies
-   2. `npm run build-{linux/macos}` - creates "opendistro-perf-top-{linux/macos}" executables.
+   2. `npm run build-{linux/macos}` - creates "opensearch-perf-top-{linux/macos}" executables.
 3. For cleaning, run `./gradlew clean` which will run:
    1. `npm run clean` - deletes locally installed dependencies and executables
 
