@@ -1,6 +1,6 @@
 ## 2021-04-26 Version 1.0.0.0-beta1 Release Notes (Current)
 
-Compatible with OpenSearch 1.0.0-alpha2
+Compatible with OpenSearch 1.0.0-beta1
 
 ### Infrastructure
 
