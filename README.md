@@ -1,5 +1,5 @@
 [![CD](https://github.com/opensearch-project/perftop/workflows/CD/badge.svg)](https://github.com/opensearch-project/perftop/actions?query=workflow%3ACD)
-[![Documentation](https://img.shields.io/badge/api-reference-blue.svg)](https://opendistro.github.io/for-elasticsearch-docs/docs/pa/)
+[![Documentation](https://img.shields.io/badge/api-reference-blue.svg)](https://docs-beta.opensearch.org/docs/pa/)
 [![Chat](https://img.shields.io/badge/chat-on%20forums-blue)](https://discuss.opendistrocommunity.dev/c/performance-analyzer/)
 ![PRs welcome!](https://img.shields.io/badge/PRs-welcome!-success)
 
@@ -62,7 +62,7 @@ Users can also define different node names for each type of graphs from the JSON
 
 ## Documentation
 
-For more information, see the [documentation](https://opendistro.github.io/for-elasticsearch-docs/).
+For more information, see the [documentation](https://docs-beta.opensearch.org/).
 
 ## Installation
 Install with npm:
@@ -72,7 +72,7 @@ npm install -g @aws/opensearch-perftop
 ```
 Excutables:
 
-Download the executables and preset JSON dashboard configs [here](https://opendistro.github.io/for-elasticsearch/downloads.html).
+Download the executables and preset JSON dashboard configs [here](https://github.com/opensearch-project/perftop/releases/tag/v1.0.0.0-beta1).
 
 Supported platforms: Linux, macOS
 
@@ -108,7 +108,7 @@ node ./lib/bin.js --dashboard $JSON
 
 ## Code of Conduct
 
-This project has adopted an [Open Source Code of Conduct](https://opendistro.github.io/for-elasticsearch/codeofconduct.html).
+This project has adopted an [Open Source Code of Conduct](https://opensearch.org/codeofconduct.html).
 
 
 ## Security issue notifications
