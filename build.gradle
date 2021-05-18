@@ -118,7 +118,7 @@ clean {
 opensearchplugin {
     name 'opensearch-perf-top'
     description 'OpenSearch PerfTop'
-    classname 'com.amazon.opendistro.opensearch.performanceanalyzer.PerformanceAnalyzerPlugin'
+    classname 'org.opensearch.performanceanalyzer.PerformanceAnalyzerPlugin'
 }
 
 
