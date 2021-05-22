@@ -27,7 +27,7 @@ Both languages were great candidates but Node.js was a win, because it is able t
 
 ## Data Fetch / Parse
 
-PerfTop makes a HTTP request to the PA's Reader to fetch the metric data (`GET /_opendistro/_performanceanalyzer/metrics?metrics=${metrics}&agg=${aggregation}&dim=${dimensions}&nodes=all`). Note that by default it queries for `nodes=all`.
+PerfTop makes a HTTP request to the PA's Reader to fetch the metric data (`GET /_plugins/_performanceanalyzer/metrics?metrics=${metrics}&agg=${aggregation}&dim=${dimensions}&nodes=all`). Note that by default it queries for `nodes=all`.
 
 The returned response is in the format of:
 
@@ -75,7 +75,7 @@ In this section, dimension type refers to the dim parameter passed into the `GET
 
 Table is a metric-level widget and has the most flexibility, meaning that the user can query for as many metric/dimensions as they wish. Each column represents a metric/dimension/node name and each row represents the data returned from the PA. Users can also define a column to sort by (in a decreasing order).
 
-PerfTop also makes a one-time `GET /_opendistro/_performanceanalyzer/metrics/units` request to fetch the units for all metrics. Tables then display these in the column headers.
+PerfTop also makes a one-time `GET /_plugins/_performanceanalyzer/metrics/units` request to fetch the units for all metrics. Tables then display these in the column headers.
 
 ### Bar
 
