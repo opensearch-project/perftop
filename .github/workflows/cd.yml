@@ -52,7 +52,7 @@ jobs:
         linux_outfile=`basename ${linux%.zip}-build-${GITHUB_RUN_NUMBER}.zip`
 
         // TODO: replace with opensearch s3 artifact
-        s3_prefix="s3://staging.artifacts.opendistroforelasticsearch.amazon.com/snapshots/opensearch-clients/perftop/"
+        s3_prefix="s3://staging.artifacts.opensearch.amazon.com/snapshots/opensearch-clients/perftop/"
 
         echo "Copying ${macos} to ${s3_prefix}${macos_outfile}"
         aws s3 cp --quiet $macos ${s3_prefix}${macos_outfile}
