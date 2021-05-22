@@ -27,7 +27,7 @@
 buildscript {
 
     ext {
-        opensearch_version = System.getProperty("opensearch.version", "1.0.0-beta1")
+        opensearch_version = System.getProperty("opensearch.version", "1.0.0-rc1")
     }
     // This isn't applying from repositories.gradle so repeating it here
     repositories {
@@ -59,8 +59,8 @@ ext {
     isMacOS = "true" == System.getProperty("build.macos", "false")
 }
 
-group =  "org.opensearch"
-version = "${perftop_version}.0-beta1"
+group = "org.opensearch"
+version = "${perftop_version}.0-rc1"
 
 if (isLinux) {
     version += "-linux-x64"
