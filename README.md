@@ -3,7 +3,25 @@
 [![Chat](https://img.shields.io/badge/chat-on%20forums-blue)](https://discuss.opendistrocommunity.dev/c/performance-analyzer/)
 ![PRs welcome!](https://img.shields.io/badge/PRs-welcome!-success)
 
-# PerfTop
+<img src="https://opensearch.org/assets/brand/SVG/Logo/opensearch_logo_default.svg" height="64px"/>
+
+<!-- TOC -->
+
+- [OpenSearch Perftop](#opensearch-perftop)
+- [Preset Dashboards](#preset-dashboards)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Build](#build)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Code of Conduct](#code-of-conduct)
+- [Security](#security)
+- [License](#license)
+- [Copyright](#copyright)
+
+<!-- /TOC -->
+
+# OpenSearch PerfTop
 
 The PerfTop CLI provides pre-configured dashboards for analyzing cluster, node, shard performance, and more. Use custom JSON templates to create the dashboards you need to diagnose your cluster performance.
 
@@ -60,10 +78,6 @@ Users can also define different node names for each type of graphs from the JSON
 * "Heap Usage" is sorted by Heap_Used.
 * If no `--nodename $NODENAME` is provided, the bar graphs will be aggregated metrics on cluster-level.
 
-## Documentation
-
-For more information, see the [documentation](https://docs-beta.opensearch.org/).
-
 ## Installation
 Install with npm:
 
@@ -72,7 +86,7 @@ npm install -g @aws/opensearch-perftop
 ```
 Excutables:
 
-Download the executables and preset JSON dashboard configs [here](https://github.com/opensearch-project/perftop/releases/tag/v1.0.0.0-beta1).
+Download the executables and preset JSON dashboard configs [here](https://github.com/opensearch-project/perftop/releases/tag/v1.0.0.0-rc1).
 
 Supported platforms: Linux, macOS
 
@@ -106,20 +120,26 @@ To run PerfTop without (re)creating the executables every code change:
 node ./lib/bin.js --dashboard $JSON
 ```
 
+## Documentation
+
+Please refer to the [technical documentation](https://docs-beta.opensearch.org/monitoring-plugins/pa/index/) for detailed information on installing and configuring Perftop.
+
+## Contributing
+
+See [developer guide](DEVELOPER_GUIDE.md) and [how to contribute to this project](CONTRIBUTING.md).
+
 ## Code of Conduct
 
-This project has adopted an [Open Source Code of Conduct](https://opensearch.org/codeofconduct.html).
+This project has adopted the [Amazon Open Source Code of Conduct](CODE_OF_CONDUCT.md). For more information see the [Code of Conduct FAQ](https://aws.github.io/code-of-conduct-faq), or contact [opensource-codeofconduct@amazon.com](mailto:opensource-codeofconduct@amazon.com) with any additional questions or comments.
 
-
-## Security issue notifications
+## Security
 
 If you discover a potential security issue in this project we ask that you notify AWS/Amazon Security via our [vulnerability reporting page](http://aws.amazon.com/security/vulnerability-reporting/). Please do **not** create a public GitHub issue.
 
-
 ## License
 
-This library is licensed under the Apache 2.0 License.
+This project is licensed under the [Apache v2.0 License](LICENSE.txt).
 
 ## Copyright
 
-Copyright 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
