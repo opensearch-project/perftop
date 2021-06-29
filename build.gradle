@@ -89,7 +89,7 @@ ext {
 test {
     enabled = false
 }
-licenseHeaders.enabled = false
+licenseHeaders.enabled = true
 validateNebulaPom.enabled = false
 
 task npmRunBuild(type: NpmTask, dependsOn: 'npmInstall') {
