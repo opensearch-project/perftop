@@ -3,11 +3,11 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - "*"
 
   pull_request:
     branches:
-      - main
+      - "*"
 
 jobs:
   build:
@@ -36,7 +36,7 @@ jobs:
 
       - name: Build OpenSearch
         working-directory: ./OpenSearch
-        run: ./gradlew publishToMavenLocal -Dbuild.version_qualifier=rc1 -Dbuild.snapshot=false
+        run: ./gradlew publishToMavenLocal -Dbuild.snapshot=false
 
       # TODO: Add tests and run in build
       - name: Build perfTop artifacts
