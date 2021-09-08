@@ -1,5 +1,5 @@
 [![CD](https://github.com/opensearch-project/perftop/workflows/CD/badge.svg)](https://github.com/opensearch-project/perftop/actions?query=workflow%3ACD)
-[![Documentation](https://img.shields.io/badge/api-reference-blue.svg)](https://docs-beta.opensearch.org/monitoring-plugins/pa/dashboards/)
+[![Documentation](https://img.shields.io/badge/api-reference-blue.svg)](https://opensearch.org/docs/monitoring-plugins/pa/dashboards/)
 [![Chat](https://img.shields.io/badge/chat-on%20forums-blue)](https://discuss.opendistrocommunity.dev/c/performance-analyzer/)
 ![PRs welcome!](https://img.shields.io/badge/PRs-welcome!-success)
 
@@ -122,7 +122,7 @@ node ./lib/bin.js --dashboard $JSON
 
 ## Documentation
 
-Please refer to the [technical documentation](https://docs-beta.opensearch.org/monitoring-plugins/pa/index/) for detailed information on installing and configuring Perftop.
+Please refer to the [technical documentation](https://opensearch.org/docs/monitoring-plugins/pa/index/) for detailed information on installing and configuring Perftop.
 
 ## Contributing
 

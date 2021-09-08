@@ -27,7 +27,7 @@
 buildscript {
 
     ext {
-        opensearch_version = System.getProperty("opensearch.version", "1.0.0")
+        opensearch_version = System.getProperty("opensearch.version", "1.1.0-SNAPSHOT")
     }
     // This isn't applying from repositories.gradle so repeating it here
     repositories {
@@ -60,7 +60,10 @@ ext {
 }
 
 group = "org.opensearch"
-version = "${perftop_version}.0"
+version = opensearch_version - '-SNAPSHOT' + '.0'
+if (isSnapshot) {
+    version += "-SNAPSHOT"
+}
 
 if (isLinux) {
     version += "-linux-x64"
