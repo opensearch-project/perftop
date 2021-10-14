@@ -79,23 +79,14 @@ Users can also define different node names for each type of graphs from the JSON
 * If no `--nodename $NODENAME` is provided, the bar graphs will be aggregated metrics on cluster-level.
 
 ## Installation
-Install with npm:
-
-```bash
-npm install -g @aws/opensearch-perftop
-```
 Excutables:
 
-Download the executables and preset JSON dashboard configs [here](https://github.com/opensearch-project/perftop/releases/tag/v1.0.0.0-rc1).
+Download the executables and preset JSON dashboard configs [here](https://github.com/opensearch-project/perftop/releases/tag/1.1.0.0).
 
 Supported platforms: Linux, macOS
 
 ## Usage
 
-npm:
-```bash
-opensearch-perf-top --dashboard NodeAnalysis
-```
 Excutables:
 
 ```
