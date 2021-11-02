@@ -27,17 +27,6 @@ jobs:
       - name: Checkout perftop package
         uses: actions/checkout@v2
 
-      - name: Checkout OpenSearch
-        uses: actions/checkout@v2
-        with:
-          repository: 'opensearch-project/OpenSearch'
-          path: OpenSearch
-          ref: '1.1'
-
-      - name: Build OpenSearch
-        working-directory: ./OpenSearch
-        run: ./gradlew publishToMavenLocal
-
       # TODO: Add tests and run in build
       - name: Build perfTop artifacts
         run: |
