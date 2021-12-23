@@ -27,7 +27,7 @@
 buildscript {
 
     ext {
-        opensearch_version = System.getProperty("opensearch.version", "1.2.0-SNAPSHOT")
+        opensearch_version = System.getProperty("opensearch.version", "1.2.3-SNAPSHOT")
     }
     // This isn't applying from repositories.gradle so repeating it here
     repositories {
