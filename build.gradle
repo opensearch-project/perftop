@@ -34,7 +34,6 @@ buildscript {
         mavenCentral()
         mavenLocal()
         maven { url "https://plugins.gradle.org/m2/" }
-        jcenter()
         maven { url "https://aws.oss.sonatype.org/content/repositories/snapshots" }
     }
 
@@ -79,7 +78,6 @@ repositories {
     mavenCentral()
     mavenLocal()
     maven { url "https://plugins.gradle.org/m2/" }
-    jcenter()
     maven { url "https://aws.oss.sonatype.org/content/repositories/snapshots" }
 }
 
