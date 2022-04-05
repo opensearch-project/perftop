@@ -81,7 +81,7 @@ Users can also define different node names for each type of graphs from the JSON
 ## Installation
 Excutables:
 
-Download the executables and preset JSON dashboard configs [here](https://github.com/opensearch-project/perftop/releases/tag/1.1.0.0).
+Download the executables and preset JSON dashboard configs [here](https://github.com/opensearch-project/perftop/releases).
 
 Supported platforms: Linux, macOS
 
