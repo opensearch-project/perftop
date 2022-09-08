@@ -22,7 +22,7 @@
   "dependencies": {
     "argparse": "1.0.10",
     "blessed": "0.1.54",
-    "blessed-contrib": "^4.8.20",
+    "blessed-contrib": "^4.11.0",
     "console-stamp": "3.0.2",
     "merge": "2.1.1",
     "lodash": "4.17.21",
