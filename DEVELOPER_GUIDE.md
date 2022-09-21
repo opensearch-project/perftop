@@ -29,6 +29,13 @@ To build from the command line, use `./gradlew`.
 ./gradlew build -Dbuild.linux={true/false} -Dbuild.macos={true/false}
 ```
 
+#### Build Issues
+
+1. eslint should not lint through the node_modules folder by default, if it does not obey that rule,
+   try deleting the package-lock.json file and re-run `npm install`.
+   _This can be followed as a first step towards other build issues as well._
+
+
 ### Using IntelliJ IDEA
 
 Launch Intellij IDEA, choose **Import Project**, and select the `build.gradle` file in the root of this package. 
