@@ -6,8 +6,13 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 
 | Maintainer      | GitHub ID                                   | Affiliation |
 | --------------- | ------------------------------------------- | ----------- |
-| Joshua Tokle    | [jotok](https://github.com/jotok)           | Amazon      |
 | Kunal Khatua    | [kkhatua](https://github.com/kkhatua)       | Amazon      |
-| Ruizhen Guo     | [rguo-aws](https://github.com/rguo-aws)     | Amazon      |
 | Sruti Parthiban | [sruti1312](https://github.com/sruti1312)   | Amazon      |
 | Yujia Sun       | [yujias0706](https://github.com/yujias0706) | Amazon      |
+
+## Emeritus
+
+| Maintainer     | GitHub ID                                    | Affiliation |
+| -------------- | -------------------------------------------- | ----------- |
+| Joshua Tokle   | [jotok](https://github.com/jotok)            | Amazon      |
+| Ruizhen Guo    | [rguo-aws](https://github.com/rguo-aws)      | Amazon      |
