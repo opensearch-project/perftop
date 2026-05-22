@@ -12,17 +12,17 @@ jobs:
     steps:
 
     - name: Set up JDK 14
-      uses: actions/setup-java@v1
+      uses: actions/setup-java@b6e674f4b717d7b0ae3baee0fbe79f498905dfde # v1
       with:
         java-version: 14.0.x
 
     - name: Set up Node JS
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e # v1
       with:
         node-version: 10.15.0
 
     - name: Checkout perftop package
-      uses: actions/checkout@v2
+      uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
 
     - name: Build
       run: |
@@ -36,7 +36,7 @@ jobs:
         cp $linux_artifact artifacts/
 
     - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@67fbcbb121271f7775d2e7715933280b06314838 # v1
       with:
         aws-access-key-id: ${{ secrets.AWS_STAGING_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_STAGING_SECRET_ACCESS_KEY }}
@@ -61,7 +61,7 @@ jobs:
         aws s3 cp --quiet $linux ${s3_prefix}${linux_outfile}
 
     - name: Upload Workflow Artifacts
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@3446296876d12d4e3a0f3145a3c87e67bf0a16b5 # v1
       with:
         name: artifacts
         path: artifacts/
