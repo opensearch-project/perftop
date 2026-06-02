@@ -27,7 +27,7 @@
     "hosted-git-info": "2.8.9",
     "lodash": "4.17.21",
     "merge": "2.1.1",
-    "pkg": "^4.4.9"
+    "pkg": "^5.0.0"
   },
   "pkg": {
     "assets": "node_modules/blessed/**/*"
