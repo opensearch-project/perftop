@@ -8,7 +8,6 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 | --------------- | ------------------------------------------- | ----------- |
 | Kunal Khatua    | [kkhatua](https://github.com/kkhatua)       | Amazon      |
 | Sruti Parthiban | [sruti1312](https://github.com/sruti1312)   | Amazon      |
-| Yujia Sun       | [yujias0706](https://github.com/yujias0706) | Amazon      |
 
 ## Emeritus
 
@@ -16,3 +15,4 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 | -------------- | -------------------------------------------- | ----------- |
 | Joshua Tokle   | [jotok](https://github.com/jotok)            | Amazon      |
 | Ruizhen Guo    | [rguo-aws](https://github.com/rguo-aws)      | Amazon      |
+| Yujia Sun      | [yujias0706](https://github.com/yujias0706)  | Amazon      |
